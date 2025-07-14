@@ -1,0 +1,30 @@
+{
+	"parser": {
+		"classes": [
+			"ClassParser",
+			"DataClassParser"
+		]
+	},
+	"schemaNode": {
+		"classes": [
+			"JSONSchemaArrayNode",
+			"JSONSchemaBooleanNode",
+			"JSONSchemaIntegerNode",
+			"JSONSchemaNode",
+			"JSONSchemaNumberNode",
+			"JSONSchemaObjectNode",
+			"JSONSchemaStringNode"
+		]
+	},
+	"tests": {
+		"tables": [
+			"Table_1"
+		],
+		"methods": [
+			"test_file",
+			"test_parse",
+			"test_schema"
+		]
+	},
+	"trash": {}
+}
