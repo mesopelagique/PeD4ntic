@@ -65,7 +65,7 @@ var $schema:=cs.PeD4ntic.ClassParser.me.parseFile($classFile)
 ### Parse Data Classes
 
 ```4d
-var $schema:=$cs.PeD4ntic.DataClassParser.me.parse(ds.Users)
+var $schema:=cs.PeD4ntic.DataClassParser.me.parse(ds.Users)
 ```
 
 > - blog, picture are ignored
