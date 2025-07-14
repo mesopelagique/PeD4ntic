@@ -1,0 +1,797 @@
+{
+	"_method_": {},
+	"cs.PeD4antic": {
+		"ClassParser": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"JSONSchema": {
+			"new()": {
+				"Syntax": "**.new**( *object* : Object )",
+				"Params": [
+					[
+						"object",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"JSONSchemaNode": {
+			"new()": {
+				"Syntax": "**.new**( *type* : Text; *properties* : Object )",
+				"Params": [
+					[
+						"type",
+						"Text",
+						"->"
+					],
+					[
+						"properties",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"JSONSchemaBooleanNode": {
+			"new()": {
+				"Syntax": "**.new**( *properties* : Object )",
+				"Params": [
+					[
+						"properties",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"JSONSchemaStringNode": {
+			"new()": {
+				"Syntax": "**.new**( *properties* : Object )",
+				"Params": [
+					[
+						"properties",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"DataClassParser": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"JSONSchemaIntegerNode": {
+			"new()": {
+				"Syntax": "**.new**( *properties* : Object )",
+				"Params": [
+					[
+						"properties",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"JSONSchemaArrayNode": {
+			"new()": {
+				"Syntax": "**.new**( *properties* : Object )",
+				"Params": [
+					[
+						"properties",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"JSONSchemaObjectNode": {
+			"new()": {
+				"Syntax": "**.new**( *properties* : Object )",
+				"Params": [
+					[
+						"properties",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		},
+		"AppFile": {
+			"new()": {
+				"Syntax": "**.new**()",
+				"Params": [],
+				"Summary": ""
+			}
+		},
+		"JSONSchemaNumberNode": {
+			"new()": {
+				"Syntax": "**.new**( *properties* : Object )",
+				"Params": [
+					[
+						"properties",
+						"Object",
+						"->"
+					]
+				],
+				"Summary": ""
+			}
+		}
+	},
+	"ClassParser": {
+		"convertTypeToJsonSchema()": {
+			"Syntax": "**.convertTypeToJsonSchema**( *fourDType* : Text ) : Object",
+			"Params": [
+				[
+					"fourDType",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"matchPropertyDeclaration()": {
+			"Syntax": "**.matchPropertyDeclaration**( *line* : Text ) : Object",
+			"Params": [
+				[
+					"line",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"extractProperties()": {
+			"Syntax": "**.extractProperties**( *content* : Text ) : Collection",
+			"Params": [
+				[
+					"content",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"parseContent()": {
+			"Syntax": "**.parseContent**( *classContent* : Text; *className* : Text ) : cs.PeD4antic.JSONSchema",
+			"Params": [
+				[
+					"classContent",
+					"Text",
+					"->"
+				],
+				[
+					"className",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"cs.PeD4antic.JSONSchema",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"parseFile()": {
+			"Syntax": "**.parseFile**( *classFile* : 4D.File ) : cs.PeD4antic.JSONSchema",
+			"Params": [
+				[
+					"classFile",
+					"4D.File",
+					"->"
+				],
+				[
+					"",
+					"cs.PeD4antic.JSONSchema",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"extractClassFromCollection()": {
+			"Syntax": "**.extractClassFromCollection**( *typeString* : Text ) : Object",
+			"Params": [
+				[
+					"typeString",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"parseClassName()": {
+			"Syntax": "**.parseClassName**( *name* : Text ) : cs.PeD4antic.JSONSchema",
+			"Params": [
+				[
+					"name",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"cs.PeD4antic.JSONSchema",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
+	},
+	"JSONSchema": {
+		"save()": {
+			"Syntax": "**.save**( *file* : 4D.File )",
+			"Params": [
+				[
+					"file",
+					"4D.File",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"validate()": {
+			"Syntax": "**.validate**( *object* : Object ) : Object",
+			"Params": [
+				[
+					"object",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"_inheritedFrom_": "JSONSchemaObjectNode"
+	},
+	"JSONSchemaNode": {
+		"toObject()": {
+			"Syntax": "**.toObject**() : Object",
+			"Params": [
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"description": {
+			"Syntax": "description : Text"
+		},
+		"title": {
+			"Syntax": "title : Text"
+		},
+		"type": {
+			"Syntax": "type : Text"
+		}
+	},
+	"JSONSchemaBooleanNode": {
+		"_inheritedFrom_": "JSONSchemaNode"
+	},
+	"JSONSchemaStringNode": {
+		"maxLength": {
+			"Syntax": "maxLength : Integer"
+		},
+		"pattern": {
+			"Syntax": "pattern : Text"
+		},
+		"minLength": {
+			"Syntax": "minLength : Integer"
+		},
+		"_inheritedFrom_": "JSONSchemaNode"
+	},
+	"DataClassParser": {
+		"getJsonFormat()": {
+			"Syntax": "**.getJsonFormat**( *fieldType* : Text ) : Text",
+			"Params": [
+				[
+					"fieldType",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"convertFieldToJsonSchema()": {
+			"Syntax": "**.convertFieldToJsonSchema**( *field* : Object ) : Object",
+			"Params": [
+				[
+					"field",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"isFieldDefinition()": {
+			"Syntax": "**.isFieldDefinition**( *object* : Object ) : Boolean",
+			"Params": [
+				[
+					"object",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"normalizeFieldInfo()": {
+			"Syntax": "**.normalizeFieldInfo**( *field* : Object ) : Object",
+			"Params": [
+				[
+					"field",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"isConvertibleField()": {
+			"Syntax": "**.isConvertibleField**( *field* : Object ) : Boolean",
+			"Params": [
+				[
+					"field",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"getEntityFields()": {
+			"Syntax": "**.getEntityFields**( *entity* : Object ) : Collection",
+			"Params": [
+				[
+					"entity",
+					"Object",
+					"->"
+				],
+				[
+					"",
+					"Collection",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"mapFieldTypeToJsonType()": {
+			"Syntax": "**.mapFieldTypeToJsonType**( *fieldType* : Text ) : Text",
+			"Params": [
+				[
+					"fieldType",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Text",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"parse()": {
+			"Syntax": "**.parse**( *entity* : 4D.DataClass ) : cs.PeD4antic.JSONSchema",
+			"Params": [
+				[
+					"entity",
+					"4D.DataClass",
+					"->"
+				],
+				[
+					"",
+					"cs.PeD4antic.JSONSchema",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
+	},
+	"JSONSchemaIntegerNode": {
+		"multipleOf": {
+			"Syntax": "multipleOf : Integer"
+		},
+		"maximum": {
+			"Syntax": "maximum : Integer"
+		},
+		"minimum": {
+			"Syntax": "minimum : Integer"
+		},
+		"_inheritedFrom_": "JSONSchemaNode"
+	},
+	"JSONSchemaArrayNode": {
+		"setItemSchema()": {
+			"Syntax": "**.setItemSchema**( *itemSchema* : cs.PeD4antic.JSONSchemaNode )",
+			"Params": [
+				[
+					"itemSchema",
+					"cs.PeD4antic.JSONSchemaNode",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"maxItems": {
+			"Syntax": "maxItems : Integer"
+		},
+		"uniqueItems": {
+			"Syntax": "uniqueItems : Boolean"
+		},
+		"minItems": {
+			"Syntax": "minItems : Integer"
+		},
+		"items": {
+			"Syntax": "items : Object"
+		},
+		"_inheritedFrom_": "JSONSchemaNode"
+	},
+	"JSONSchemaObjectNode": {
+		"clone()": {
+			"Syntax": "**.clone**() : cs.PeD4antic.JSONSchemaObjectNode",
+			"Params": [
+				[
+					"",
+					"cs.PeD4antic.JSONSchemaObjectNode",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"setPropertyFormat()": {
+			"Syntax": "**.setPropertyFormat**( *propertyName* : Text; *format* : Text )",
+			"Params": [
+				[
+					"propertyName",
+					"Text",
+					"->"
+				],
+				[
+					"format",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"addDefinition()": {
+			"Syntax": "**.addDefinition**( *name* : Text; *schemaNode* : cs.PeD4antic.JSONSchemaNode )",
+			"Params": [
+				[
+					"name",
+					"Text",
+					"->"
+				],
+				[
+					"schemaNode",
+					"cs.PeD4antic.JSONSchemaNode",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setRef()": {
+			"Syntax": "**.setRef**( *reference* : Text )",
+			"Params": [
+				[
+					"reference",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setAllOf()": {
+			"Syntax": "**.setAllOf**( *schemas* : Collection )",
+			"Params": [
+				[
+					"schemas",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setNot()": {
+			"Syntax": "**.setNot**( *schema* : cs.PeD4antic.JSONSchemaNode )",
+			"Params": [
+				[
+					"schema",
+					"cs.PeD4antic.JSONSchemaNode",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"buildCompleteSchema()": {
+			"Syntax": "**.buildCompleteSchema**() : cs.PeD4antic.JSONSchema",
+			"Params": [
+				[
+					"",
+					"cs.PeD4antic.JSONSchema",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"addDependency()": {
+			"Syntax": "**.addDependency**( *propertyName* : Text; *dependency* : Variant )",
+			"Params": [
+				[
+					"propertyName",
+					"Text",
+					"->"
+				],
+				[
+					"dependency",
+					"Variant",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"addPatternProperty()": {
+			"Syntax": "**.addPatternProperty**( *pattern* : Text; *schemaNode* : cs.PeD4antic.JSONSchemaNode )",
+			"Params": [
+				[
+					"pattern",
+					"Text",
+					"->"
+				],
+				[
+					"schemaNode",
+					"cs.PeD4antic.JSONSchemaNode",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"addEnum()": {
+			"Syntax": "**.addEnum**( *propertyName* : Text; *values* : Collection )",
+			"Params": [
+				[
+					"propertyName",
+					"Text",
+					"->"
+				],
+				[
+					"values",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setAdditionalProperties()": {
+			"Syntax": "**.setAdditionalProperties**( *allowed* : Boolean )",
+			"Params": [
+				[
+					"allowed",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setMinProperties()": {
+			"Syntax": "**.setMinProperties**( *min* : Integer )",
+			"Params": [
+				[
+					"min",
+					"Integer",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setOneOf()": {
+			"Syntax": "**.setOneOf**( *schemas* : Collection )",
+			"Params": [
+				[
+					"schemas",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setRequired()": {
+			"Syntax": "**.setRequired**( *fieldNames* : Collection )",
+			"Params": [
+				[
+					"fieldNames",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"setMaxProperties()": {
+			"Syntax": "**.setMaxProperties**( *max* : Integer )",
+			"Params": [
+				[
+					"max",
+					"Integer",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"getDefinition()": {
+			"Syntax": "**.getDefinition**( *name* : Text ) : Object",
+			"Params": [
+				[
+					"name",
+					"Text",
+					"->"
+				],
+				[
+					"",
+					"Object",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"setAnyOf()": {
+			"Syntax": "**.setAnyOf**( *schemas* : Collection )",
+			"Params": [
+				[
+					"schemas",
+					"Collection",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"addProperty()": {
+			"Syntax": "**.addProperty**( *name* : Text; *schemaNode* : cs.PeD4antic.JSONSchemaNode )",
+			"Params": [
+				[
+					"name",
+					"Text",
+					"->"
+				],
+				[
+					"schemaNode",
+					"cs.PeD4antic.JSONSchemaNode",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"definitions": {
+			"Syntax": "definitions : Object"
+		},
+		"required": {
+			"Syntax": "required : Collection"
+		},
+		"allOf": {
+			"Syntax": "allOf : Collection"
+		},
+		"not": {
+			"Syntax": "not : Object"
+		},
+		"anyOf": {
+			"Syntax": "anyOf : Collection"
+		},
+		"dependencies": {
+			"Syntax": "dependencies : Object"
+		},
+		"maxProperties": {
+			"Syntax": "maxProperties : Integer"
+		},
+		"oneOf": {
+			"Syntax": "oneOf : Collection"
+		},
+		"minProperties": {
+			"Syntax": "minProperties : Integer"
+		},
+		"additionalProperties": {
+			"Syntax": "additionalProperties : Boolean"
+		},
+		"patternProperties": {
+			"Syntax": "patternProperties : Object"
+		},
+		"properties": {
+			"Syntax": "properties : Object"
+		},
+		"_inheritedFrom_": "JSONSchemaNode"
+	},
+	"AppFile": {
+		"themeSchema()": {
+			"Syntax": "**.themeSchema**() : cs.PeD4antic.JSONSchema",
+			"Params": [
+				[
+					"",
+					"cs.PeD4antic.JSONSchema",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"formsSchema()": {
+			"Syntax": "**.formsSchema**() : cs.PeD4antic.JSONSchema",
+			"Params": [
+				[
+					"",
+					"cs.PeD4antic.JSONSchema",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
+	},
+	"JSONSchemaNumberNode": {
+		"multipleOf": {
+			"Syntax": "multipleOf : Real"
+		},
+		"maximum": {
+			"Syntax": "maximum : Real"
+		},
+		"minimum": {
+			"Syntax": "minimum : Real"
+		},
+		"_inheritedFrom_": "JSONSchemaNode"
+	}
+}
