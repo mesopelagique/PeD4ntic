@@ -122,4 +122,30 @@ Function clone() : cs:C1710.JSONSchemaObjectNode
 	var $clonedProps : Object:=OB Copy:C1225(This:C1470.toObject())
 	var $cloned : cs:C1710.JSONSchemaObjectNode:=cs:C1710.JSONSchemaObjectNode.new($clonedProps)
 	return $cloned
+
+// MARK: - Shortcut methods for adding different types of properties
+
+Function addStringProperty($name : Text; $properties : Object)
+	var $stringNode : cs:C1710.JSONSchemaStringNode:=cs:C1710.JSONSchemaStringNode.new($properties)
+	This:C1470.addProperty($name; $stringNode)
+	
+Function addIntegerProperty($name : Text; $properties : Object)
+	var $integerNode : cs:C1710.JSONSchemaIntegerNode:=cs:C1710.JSONSchemaIntegerNode.new($properties)
+	This:C1470.addProperty($name; $integerNode)
+	
+Function addNumberProperty($name : Text; $properties : Object)
+	var $numberNode : cs:C1710.JSONSchemaNumberNode:=cs:C1710.JSONSchemaNumberNode.new($properties)
+	This:C1470.addProperty($name; $numberNode)
+	
+Function addBooleanProperty($name : Text; $properties : Object)
+	var $booleanNode : cs:C1710.JSONSchemaBooleanNode:=cs:C1710.JSONSchemaBooleanNode.new($properties)
+	This:C1470.addProperty($name; $booleanNode)
+	
+Function addArrayProperty($name : Text; $properties : Object)
+	var $arrayNode : cs:C1710.JSONSchemaArrayNode:=cs:C1710.JSONSchemaArrayNode.new($properties)
+	This:C1470.addProperty($name; $arrayNode)
+	
+Function addObjectProperty($name : Text; $properties : Object)
+	var $objectNode : cs:C1710.JSONSchemaObjectNode:=cs:C1710.JSONSchemaObjectNode.new($properties)
+	This:C1470.addProperty($name; $objectNode)
 	

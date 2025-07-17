@@ -35,14 +35,17 @@ var $schema:=cs.PeD4ntic.JSONSchema.new({ \
 ```4d
 $schema:=cs.PeD4ntic.JSONSchema.new({title: "User"; description: "A user object"})
 
-$schema.addProperty("name"; cs.PeD4ntic.JSONSchemaStringNode.new({ \
+$schema.addStringProperty("name"; { \
     minLength: 2; \
     maxLength: 50; \
     pattern: "^[a-zA-Z\\s]+$" \
-}))
-$schema.addProperty("email"; cs.PeD4ntic.JSONSchemaStringNode.new({format: "email"}))
-$schema.required:=["name"; "email"]
-$schema.additionalProperties:=False
+})
+$schema.addStringProperty("email"; {format: "email"})
+$schema.addIntegerProperty("age"; {minimum: 0; maximum: 150})
+$schema.addBooleanProperty("active"; {})
+$schema.addArrayProperty("tags"; {minItems: 1; uniqueItems: True})
+$schema.setRequired(["name"; "email"])
+$schema.setAdditionalProperties(False)
 ```
 
 #### Validate data against schema
